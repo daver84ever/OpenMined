@@ -6,7 +6,7 @@ namespace OpenMined.Syft.Tensor
 {
     public partial class IntTensor
     {
-    private void Sort(SortOrder order = SortOrder.Ascending)
+	    private void Sort(SortOrder order = SortOrder.Ascending)
 		{
 			switch (order)
 			{
@@ -20,7 +20,7 @@ namespace OpenMined.Syft.Tensor
 			}
 		}
 
-		protected class SortIntAscendingHelper : IComparer<float>
+		protected class SortIntAscendingHelper : IComparer<int>
 		{
 			static public SortIntAscendingHelper Get
 			{
@@ -34,7 +34,7 @@ namespace OpenMined.Syft.Tensor
 			}
 			static private SortIntAscendingHelper _instance = null;
 
-			public int Compare(float x, float y)
+			public int Compare(int x, int y)
 			{
 				if (x > y)
 				{
@@ -50,7 +50,7 @@ namespace OpenMined.Syft.Tensor
 			}
 		}
 
-		protected class SortIntDeascendingHelper : IComparer<float>
+		protected class SortIntDeascendingHelper : IComparer<int>
 		{
 			static public SortIntDeascendingHelper Get
 			{
@@ -65,7 +65,7 @@ namespace OpenMined.Syft.Tensor
 			}
 			static private SortIntDeascendingHelper _instance = null;
 
-			public int Compare(float x, float y)
+			public int Compare(int x, int y)
 			{
 				if (x > y)
 				{
@@ -81,6 +81,5 @@ namespace OpenMined.Syft.Tensor
 			}
 		}
     }
- 
 }
 
